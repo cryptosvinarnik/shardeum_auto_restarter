@@ -65,7 +65,7 @@ def main():
     while True:
         status = get_status()
 
-        if status["state"] == "stopped":
+        if status.get("state", "") == "stopped":
             start()
             print("Node is restarted")
 
